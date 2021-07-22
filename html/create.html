@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear Transacción</title>
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+
+  body{
+    height: 100%; 
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgb(93, 179, 236); 
+  }
+  
+  
+  .contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 80px auto;
+    border-radius: 10px;  
+    padding-top: 30px;
+    padding-bottom: 20px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+  }
+  
+  
+  input{
+    background-color: #fbfbfb; 
+    width: 408px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #555ee0; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+  }
+  
+  
+  textarea{
+    background-color: #fbfbfb; 
+    width: 405px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #555ee0; 
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+  
+  button{
+    height: 45px; 
+    padding-left: 5px;
+    padding-right: 5px;   
+    margin-bottom: 20px; 
+    margin-top: 10px;   
+    text-transform: uppercase;
+    background-color: #555ee0; 
+    border-color: #555ee0; 
+    border-style: solid; 
+    border-radius: 10px;  
+    width: 420px;   
+    cursor: pointer;
+  }
+  
+  
+  button p{
+    color: #fff; 
+  }
+  
+  
+  span{
+    color: #f80000; 
+  }
+  
+  
+  .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  
+  h1{
+    font-size: 39px;  
+    text-align: letf; 
+    padding-bottom: 20px; 
+    color: #555ee0;
+  }
+  
+  
+  h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e;   
+  }
+  
+  
+  p{
+    font-size: 14px; 
+    color: #0e0e0e; 
+  }
+  
+  
+  ::-webkit-input-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  ::-webkit-textarea-placeholder {
+   color: #a8a8a8;
+  }
+  
+  
+  .formulario input:focus{
+    outline:0;
+    border: 1px solid #97d848;
+  }
+  
+  
+  .formulario textarea:focus{
+    outline:0;
+    border: 1px solid #97d848;
+  }
+</style>
+  
+  </head>
+
+
+<body>   
+
+  <div class="contact_form">
+
+    <div class="formulario" >      
+      <h1>CREAR TRANSACCIÓN</h1>
+        <h3 >Ingrese los datos solicitados</h3>
+        <h5> Informacion del Pago</h5> 
+
+          <form action="" method="post" id="Transaction">   
+            <p>
+              <label for="accountId" class="Monto">accountId
+                <span class="obligatorio">*</span>                    
+              </label>
+                <input type="text" name="introducir_accountId" id="accountId" required="obligatorio" placeholder="accountId" value="30336">
+            </p>
+            <p>
+              <label for="token" class="Monto">token
+                <span class="obligatorio">*</span>                    
+              </label>
+                <input type="text" name="introducir_token" id="token" required="obligatorio" placeholder="token" value="bflMObSMSnyvysHpC72*">
+            </p>                
+                <p>
+                  <label for="Amount" class="Monto">Amount
+                    <span class="obligatorio">*</span>                    
+                  </label>
+                    <input type="text" name="introducir_nombre" id="amount" required="obligatorio" placeholder="Ingrese el monto" value="1000" enabled="">
+                </p>
+              
+                <p>
+                  <label for="Tax" class="colocar_Tax" >Tax
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_Tax" id="tax" required="obligatorio" placeholder="Porcentaje del iva sobre el valor de la transacción (solo informativo)" value="0">
+                </p>
+            
+                <p>
+                  <label for="description" class="colocar_description">Description
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_description" id="description" required="obligatorio" placeholder="Ingrese descripcion" value="prueba html">
+                </p>    
+                <p>
+                  <label for="toolId" class="colocar_toolId">ToolId
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_toolId" id="toolId" required="obligatorio"placeholder="Origen de la transacción" value="5">
+                </p>  
+              
+                <p>
+                  <label for="registryToolId" class="colocar_registryToolId">registryToolId
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_registryToolId" id="registryToolId" required="obligatorio"placeholder="registryToolId" value="0">
+                </p>    
+              
+                <p>
+                  <label for="currency" class="colocar_currency">currency
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" name="introducir_currency" id="currency" required="obligatorio" placeholder="Tipo de modena." value="COP">
+                </p>    
+                <h5>Informacion del cliente</h5>
+                <p>
+                  <label for="Name" class="colocar_Name">Name
+                  </label>
+                    <input type="text" name="introducir_Name" id="name" placeholder="Nombre Del Cliente" value="Pagos Inteligentes">
+                </p>  
+                <p>
+                  <label for="IdType" class="colocar_IdType">IdType
+                  </label>
+                    <input type="form-label" name="introducir_IdType" id="idType" placeholder="Tipo de Documento" value="COP">
+                <p>
+                  <label for="idNumber" class="colocar_idNumber">IdNumber
+                  </label>
+                    <input type="text" name="introducir_idNumber" id="idNumber" placeholder="Documento" value="123456789">
+                </p>  
+                <p>
+                  <label for="Email" class="colocar_Email">Email
+                  </label>
+                    <input type="text" name="introducir_Email" id="email" placeholder="Correo" value="comprobantes@pagosinteligentes.com">
+                </p>  
+                <p>
+                  <label for="phone" class="colocar_phone">Phone
+                  </label>
+                    <input type="text" name="introducir_Phone" id="phone" placeholder="Telefono" value="573213285290">
+                </p> 
+
+                <h5>Informacion adicional</h5>
+                <p>
+                  <label for="disabledPaymentMethod" class="colocar_disabledPaymentMethod">DisabledPaymentMethod
+                  </label>
+                    <input type="text" name="introducir_disabledPaymentMethod" id="disabledPaymentMethod"  placeholder="Id de los medio de pago que va a desactivar, separados por una coma " value="20,21,24">
+                </p>  
+                <p>
+                  <label for="infoAdditional" class="colocar_infoAdditional">infoAdditional
+                  </label>
+                    <input type="text" name="introducir_infoAdditional" id="infoAdditional"  placeholder="infoAdditional " value="0">
+                </p>  
+                <p>
+                  <label for="urlResponseOk" class="colocar_urlResponseOk">UrlResponseOk
+                  </label>
+                    <input type="form-label" name="introducir_urlResponseOk" id="urlResponseOk"  placeholder="Url a la que el cliente será redirigido si la transacción es aprobada." value="https://sag.pagosinteligentes.com:8140/">
+                    
+                </p>  
+                <p>
+                  <label for="urlResponseFail" class="colocar_urlResponseFail">UrlResponseFail
+                  </label>
+                    <input type="text" name="introducir_urlResponseFail" id="urlResponseFail"  placeholder="Url a la que el cliente será redirigido si la transacción es rechazada." value="https://sag.pagosinteligentes.com:8140/">
+                </p>  
+                <p>
+                  <label for="urlResponsePending" class="colocar_urlResponsePending">UrlResponsePending
+                  </label>
+                    <input type="text" name="introducir_UrlResponsePending" id="urlResponsePending"  placeholder="Url a la que el cliente será redirigido si la transacción es pendiente." value="573213285290">
+                </p>   
+                <p>
+                  <label for="urlNotificationPost" class="colocar_urlNotificationPost">UrlNotificationPost
+                  </label>
+                    <input type="text" name="introducir_urlNotificationPost" id="urlNotificationPost" placeholder="Url a la que se va a enviar el post con los datos de la transacción." value="https://sag.pagosinteligentes.com:8140/">
+                </p> 
+                <p>
+                  <label for="photo" class="colocar_photo">Photo
+                  </label>
+                    <input type="text" name="introducir_photo" id="photo"  placeholder="Url de la foto" value="https://dl.dropboxusercontent.com/s/jghrtm678do5fts/carrito.jpg?dl=0">
+                </p> 
+                <p>
+                  <label for="cashDiscount" class="colocar_cashDiscount">CashDiscount
+                  </label>
+                    <input type="text" name="introducir_cashDiscount" id="cashDiscount"  placeholder="Valor del descuento" value="100">
+                </p> 
+                <p>
+                  <label for="expiredCashDiscount" class="colocar_expiredCashDiscount">ExpiredCashDiscount
+                  </label>
+                    <input type="text" name="introducir_expiredCashDiscount" id="expiredCashDiscount"  placeholder="Fecha expiracion de descuento" value="2021/12/31">
+                </p> 
+                <p>
+                  <label for="deliveryAddres" class="colocar_deliveryAddres">DeliveryAddres
+                  </label>
+                    <input type="text" name="introducir_deliveryAddres" id="deliveryAddres"  placeholder="Campo para validar si se va a realizar envío o no" value="true">
+                </p> 
+                <p>
+                  <label for="ammountShipping" class="colocar_ammountShipping">AmmountShipping
+                  </label>
+                    <input type="text" name="introducir_ammountShipping" id="ammountShipping"  placeholder="Valor del envio" value="0">
+                </p> 
+              </div>
+              
+              <button value="Submit" id="btenviar" type="button" onclick="submitform()"> Enviar</button> 
+
+                <p class="aviso">
+                  <span class="obligatorio"> * </span>los campos son obligatorios.
+                </p> 
+          </form>
+          <script type="text/javascript">
+         
+          function submitform(){
+            alert("Informacion enviada")
+            console.log(document.getElementById('accountId').value)
+            var json = {
+        "generateTransaction": {
+            "security": {
+              "accountId": document.getElementById('accountId').value,
+              "token": document.getElementById('token').value
+            },
+            "infoPayment": {
+              "amount": document.getElementById('amount').value,
+              "tax": document.getElementById('tax').value,
+              "description": document.getElementById('description').value,
+              "toolId": document.getElementById('toolId').value,
+              "registryToolId": document.getElementById('registryToolId').value,
+              "currency": document.getElementById('currency').value
+            },
+            "infoClient": {
+              "name": document.getElementById('name').value,
+              "idType": document.getElementById('idType').value,
+              "idNumber": document.getElementById('idNumber').value,
+              "email": document.getElementById('email').value,
+              "phone": document.getElementById('phone').value
+            },
+			"infoAdditional": {
+              "disabledPaymentMethod": document.getElementById('disabledPaymentMethod').value,
+              "infoAdditional": document.getElementById('infoAdditional').value,
+              "urlResponseOk": document.getElementById('urlResponseOk').value,
+              "urlResponseFail": document.getElementById('urlResponseFail').value,
+              "urlResponsePending": document.getElementById('urlResponsePending').value,
+              "urlNotificationPost": document.getElementById('urlNotificationPost').value,
+              "photo": document.getElementById('photo').value,
+              "cashDiscount": document.getElementById('cashDiscount').value,
+              "expiredCashDiscount": document.getElementById('expiredCashDiscount').value,
+              "deliveryAddres": true,              
+              "ammountShipping": document.getElementById('ammountShipping').value
+            },
+            
+          }   
+    }
+            const url ='https://apiecommerce.redpagos.co:8530/CheckOut/MethodGenerateTransaction';
+            fetch(url, {
+              method: 'POST',
+        headers: {
+            'Content-Type':'application/json', 
+            'accept': 'text/plain'           
+            },
+        body: JSON.stringify(json)
+
+            })
+            
+            .then(response => {
+             var mensaje = response.text()
+             return mensaje            
+            })       
+             .then(body => {
+            // var mensaje = response.text()
+             console.log(body)
+            alert(body) 
+            })  
+            
+            .catch(err=>console.log(err))  
+}
+          
+
+          </script>
+
+    </div>  
+  </div>
+
+</body>
+</html>
