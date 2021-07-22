@@ -349,10 +349,13 @@
              var mensaje = response.text()
              return mensaje            
             })       
-             .then(body => {
+            .then(body => {
             // var mensaje = response.text()
              console.log(body)
             alert(body) 
+            //window.location.href = body.urlPayment
+            var objeto = JSON.parse( body);
+            window.location.href = objeto.urlPayment
             })  
             
             .catch(err=>console.log(err))  
